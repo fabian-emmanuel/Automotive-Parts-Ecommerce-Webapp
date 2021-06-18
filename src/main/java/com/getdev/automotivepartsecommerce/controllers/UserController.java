@@ -31,7 +31,7 @@ public class UserController {
         mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 
         Cart cart = new Cart();
-        cartService.createCart(cart);
+        cartService.save(cart);
         UserDto userDto = mapper.map(userDetails, UserDto.class);
         userDto.setCart(cart);
 

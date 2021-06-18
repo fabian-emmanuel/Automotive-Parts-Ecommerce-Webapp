@@ -12,7 +12,7 @@ public class CartServiceImpl implements CartService {
     private final CartRepo cartRepo;
 
     @Override
-    public void createCart(Cart cart) {
+    public void save(Cart cart) {
         cartRepo.save(cart);
     }
 }

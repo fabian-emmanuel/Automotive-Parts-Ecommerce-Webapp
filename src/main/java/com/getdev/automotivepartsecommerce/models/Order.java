@@ -12,12 +12,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 @RequiredArgsConstructor
 @Getter
 @Setter
 public class Order {
-    @Id @GeneratedValue
+    @Id @GeneratedValue()
     private Long id;
 
     @ManyToOne
