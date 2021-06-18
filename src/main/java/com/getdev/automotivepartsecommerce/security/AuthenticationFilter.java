@@ -2,7 +2,7 @@ package com.getdev.automotivepartsecommerce.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.getdev.automotivepartsecommerce.dtos.UserDto;
-import com.getdev.automotivepartsecommerce.models.payloads.requests.LoginRequest;
+import com.getdev.automotivepartsecommerce.payloads.requests.LoginRequest;
 import com.getdev.automotivepartsecommerce.services.UserService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

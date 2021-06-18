@@ -3,7 +3,7 @@ package com.getdev.automotivepartsecommerce.controllers;
 import com.getdev.automotivepartsecommerce.models.Cart;
 import com.getdev.automotivepartsecommerce.models.Product;
 import com.getdev.automotivepartsecommerce.models.UserEntity;
-import com.getdev.automotivepartsecommerce.models.payloads.requests.CartRequest;
+import com.getdev.automotivepartsecommerce.payloads.requests.CartRequest;
 import com.getdev.automotivepartsecommerce.services.CartService;
 import com.getdev.automotivepartsecommerce.services.ProductService;
 import com.getdev.automotivepartsecommerce.services.UserService;
@@ -12,13 +12,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.Principal;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/cart")
+@RequestMapping("/api/cart")
 public class CartController {
     private final UserService userService;
     private final CartService cartService;

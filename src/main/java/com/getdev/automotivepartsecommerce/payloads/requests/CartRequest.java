@@ -1,4 +1,4 @@
-package com.getdev.automotivepartsecommerce.models.payloads.requests;
+package com.getdev.automotivepartsecommerce.payloads.requests;
 
 import lombok.Data;
 

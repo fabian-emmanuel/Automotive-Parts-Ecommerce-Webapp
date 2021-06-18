@@ -2,8 +2,8 @@ package com.getdev.automotivepartsecommerce.controllers;
 
 import com.getdev.automotivepartsecommerce.dtos.UserDto;
 import com.getdev.automotivepartsecommerce.models.Cart;
-import com.getdev.automotivepartsecommerce.models.payloads.requests.UserDetails;
-import com.getdev.automotivepartsecommerce.models.payloads.response.UserResponse;
+import com.getdev.automotivepartsecommerce.payloads.requests.UserDetails;
+import com.getdev.automotivepartsecommerce.payloads.response.UserResponse;
 import com.getdev.automotivepartsecommerce.services.CartService;
 import com.getdev.automotivepartsecommerce.services.UserService;
 import lombok.AllArgsConstructor;
@@ -20,7 +20,7 @@ import javax.validation.Valid;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController {
     private final UserService userService;
     private final CartService cartService;

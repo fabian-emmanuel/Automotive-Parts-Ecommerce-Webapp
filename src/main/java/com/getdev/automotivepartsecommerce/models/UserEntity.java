@@ -10,11 +10,12 @@ import java.io.Serializable;
 @Entity
 @Getter
 @Setter
-@Table(name = "user")
+@Table(name = "users")
 public class UserEntity implements Serializable {
     @Id @GeneratedValue
     private Long id;
     @Column(nullable = false, unique = true)
+
     private String userId;
     @Column(nullable = false)
 
