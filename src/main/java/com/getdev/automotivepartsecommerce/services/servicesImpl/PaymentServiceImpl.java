@@ -13,7 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -23,18 +22,19 @@ public class PaymentServiceImpl implements PaymentService {
 
 
     @Override
-    public String getPaymentAuthorizationUrl(InitializeTransactionRequest request) throws Exception {
-        request.setEmail("emmanuel.fabian.dev@gmail.com");
+    public String getPaymentAuthorizationUrl(InitializeTransactionRequest request) {
+        request.setEmail("test@test.com");
 
         //conversion from Kobo to Naira
-        request.setAmount(3500 * 100);
-        request.setCallBackUrl("http://localhost/api/payment/confirm");
+        request.setAmount(3500*100);
+//        request.setCallBackUrl("http://localhost/api/payment/confirm");
 
+        System.err.println("Reached here***************");
         InitializeTransactionResponse res = InitializeTransaction.initTransaction(request);
 
-        String authorizationUrl = Objects.requireNonNull(res).getData().getAuthorization_url();
+        String authorizationUrl = res.getData().getAuthorization_url();
 
-        if (!res.isStatus()) return null;
+        if (!res.getStatus()) return null;
 
         try{
         //save it in the database to check later if user has made payment;

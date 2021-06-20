@@ -6,6 +6,6 @@ import lombok.*;
 @ToString
 @RequiredArgsConstructor
 public class HttpResponse {
-    private int status;
+    private Integer status;
     private String message;
 }

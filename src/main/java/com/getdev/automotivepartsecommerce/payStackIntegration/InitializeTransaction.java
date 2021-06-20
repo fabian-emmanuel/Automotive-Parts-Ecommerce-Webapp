@@ -11,16 +11,17 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class InitializeTransaction {
-    public static InitializeTransactionResponse initTransaction(InitializeTransactionRequest request) throws Exception {
 
-        InitializeTransactionResponse initializeTransactionResponse;
+public class InitializeTransaction {
+
+
+    public static InitializeTransactionResponse initTransaction(InitializeTransactionRequest request) {
+        InitializeTransactionResponse initializeTransactionResponse = null;
 
         try {
 
-            // convert transaction to json then use it as a body to post json
             Gson gson = new Gson();
-            // add paystack charges to the amount
+
             StringEntity postingString = new StringEntity(gson.toJson(request));
 
             CloseableHttpClient client = HttpClientBuilder.create().build();
@@ -28,7 +29,7 @@ public class InitializeTransaction {
             HttpPost post = new HttpPost("https://api.paystack.co/transaction/initialize");
             post.setEntity(postingString);
             post.addHeader("Content-type", "application/json");
-            post.addHeader("Authorization", "Bearer sk_test_42da6dc739d3dc54596e4bc6a41f4cb163078299");
+            post.addHeader("Authorization", "Bearer sk_test_c50358f944856001a866ae90a236f747064e2ee2");
 
             StringBuilder result = new StringBuilder();
             HttpResponse response = client.execute(post);
@@ -42,9 +43,7 @@ public class InitializeTransaction {
                 }
 
             } else {
-//                throw new NotAuthorizedException("Error Occurred while initializing transaction");
-                System.out.println("Error Occurred while initializing transaction");
-                return null;
+                throw new Exception("Error Occurred while initializing transaction");
             }
 
             ObjectMapper mapper = new ObjectMapper();
@@ -52,7 +51,6 @@ public class InitializeTransaction {
             initializeTransactionResponse = mapper.readValue(result.toString(), InitializeTransactionResponse.class);
         } catch (Exception ex) {
             ex.printStackTrace();
-            throw new Exception("Failure initializing paystack transaction");
         }
 
         return initializeTransactionResponse;

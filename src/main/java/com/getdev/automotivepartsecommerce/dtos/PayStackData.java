@@ -8,11 +8,13 @@ import org.apache.tomcat.util.http.parser.Authorization;
 
 import java.math.BigDecimal;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
 
 @Data
 @RequiredArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(NON_NULL)
 public class PayStackData {
     private BigDecimal amount;
     /**
