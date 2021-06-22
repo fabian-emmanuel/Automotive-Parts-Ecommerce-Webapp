@@ -45,8 +45,6 @@ public class PayStackVerifyTransactionResponse extends VerifyTransactionResponse
                 throw new Exception("Error Occurred while connecting to pay-stack url");
             }
 
-            System.out.println("<<<"+result);
-
             ObjectMapper mapper = new ObjectMapper();
 
             try {
