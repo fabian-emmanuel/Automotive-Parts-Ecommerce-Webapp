@@ -1,6 +1,6 @@
 package com.getdev.automotivepartsecommerce.services;
 
-import com.getdev.automotivepartsecommerce.payStackIntegration.InitializeTransactionRequest;
+import com.getdev.automotivepartsecommerce.configurations.payStackIntegration.InitializeTransactionRequest;
 import com.getdev.automotivepartsecommerce.payloads.response.HttpResponse;
 import org.springframework.http.ResponseEntity;
 

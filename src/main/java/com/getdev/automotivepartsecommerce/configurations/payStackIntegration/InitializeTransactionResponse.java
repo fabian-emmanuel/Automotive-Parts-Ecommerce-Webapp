@@ -1,4 +1,4 @@
-package com.getdev.automotivepartsecommerce.payStackIntegration;
+package com.getdev.automotivepartsecommerce.configurations.payStackIntegration;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;

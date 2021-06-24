@@ -1,10 +1,10 @@
 package com.getdev.automotivepartsecommerce.services.servicesImpl;
 
 import com.getdev.automotivepartsecommerce.models.Payment;
-import com.getdev.automotivepartsecommerce.payStackIntegration.InitializeTransaction;
-import com.getdev.automotivepartsecommerce.payStackIntegration.InitializeTransactionRequest;
-import com.getdev.automotivepartsecommerce.payStackIntegration.InitializeTransactionResponse;
-import com.getdev.automotivepartsecommerce.payStackIntegration.PayStackVerifyTransactionResponse;
+import com.getdev.automotivepartsecommerce.configurations.payStackIntegration.InitializeTransaction;
+import com.getdev.automotivepartsecommerce.configurations.payStackIntegration.InitializeTransactionRequest;
+import com.getdev.automotivepartsecommerce.configurations.payStackIntegration.InitializeTransactionResponse;
+import com.getdev.automotivepartsecommerce.configurations.payStackIntegration.PayStackVerifyTransactionResponse;
 import com.getdev.automotivepartsecommerce.payloads.response.HttpResponse;
 import com.getdev.automotivepartsecommerce.repositories.PaymentRepo;
 import com.getdev.automotivepartsecommerce.services.PaymentService;

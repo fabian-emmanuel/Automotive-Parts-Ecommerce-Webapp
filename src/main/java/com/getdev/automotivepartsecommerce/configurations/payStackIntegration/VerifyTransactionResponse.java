@@ -1,12 +1,15 @@
-package com.getdev.automotivepartsecommerce.payStackIntegration;
+package com.getdev.automotivepartsecommerce.configurations.payStackIntegration;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.getdev.automotivepartsecommerce.dtos.PayStackData;
 import lombok.Data;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @RequiredArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -26,27 +29,27 @@ public class VerifyTransactionResponse {
      */
     private PayStackData payStackData;
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public PayStackData getPayStackData() {
-        return payStackData;
-    }
-
-    public void setPayStackData(PayStackData payStackData) {
-        this.payStackData = payStackData;
-    }
+//    public String getStatus() {
+//        return status;
+//    }
+//
+//    public void setStatus(String status) {
+//        this.status = status;
+//    }
+//
+//    public String getMessage() {
+//        return message;
+//    }
+//
+//    public void setMessage(String message) {
+//        this.message = message;
+//    }
+//
+//    public PayStackData getPayStackData() {
+//        return payStackData;
+//    }
+//
+//    public void setPayStackData(PayStackData payStackData) {
+//        this.payStackData = payStackData;
+//    }
 }

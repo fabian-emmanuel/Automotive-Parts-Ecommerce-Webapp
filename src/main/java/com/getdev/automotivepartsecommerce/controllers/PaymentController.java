@@ -1,6 +1,6 @@
 package com.getdev.automotivepartsecommerce.controllers;
 
-import com.getdev.automotivepartsecommerce.payStackIntegration.InitializeTransactionRequest;
+import com.getdev.automotivepartsecommerce.configurations.payStackIntegration.InitializeTransactionRequest;
 import com.getdev.automotivepartsecommerce.payloads.response.HttpResponse;
 import com.getdev.automotivepartsecommerce.services.PaymentService;
 import lombok.RequiredArgsConstructor;
